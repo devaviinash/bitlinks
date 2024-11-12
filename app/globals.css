@@ -2,20 +2,301 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Faster animations */
+@keyframes fadeInFast {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes slideInFast {
+   0% {
+      transform: translateX(-30px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes fadeInDelayFast {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes imageFadeFast {
+   0% {
+      opacity: 0;
+      transform: translateY(40px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* Apply fast animations */
+.animate-fadeInFast {
+   animation: fadeInFast 0.6s ease-in-out forwards;
+}
+
+.animate-slideInFast {
+   animation: slideInFast 0.6s ease-out forwards;
+}
+
+.animate-fadeInDelayFast {
+   animation: fadeInDelayFast 0.8s ease-in-out forwards;
+}
+
+.animate-imageFadeFast {
+   animation: imageFadeFast 0.8s ease-out forwards;
+}
+
+/* Faster animations */
+@keyframes fadeInFast {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes slideInFast {
+   0% {
+      transform: translateX(-30px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes fadeInDelayFast {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes imageSlideIn {
+   0% {
+      transform: translateX(40px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes textPop {
+   0% {
+      transform: scale(0.8);
+      opacity: 0;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+
+/* Apply fast animations */
+.animate-fadeInFast {
+   animation: fadeInFast 0.6s ease-in-out forwards;
+}
+
+.animate-slideInFast {
+   animation: slideInFast 0.6s ease-out forwards;
+}
+
+.animate-fadeInDelayFast {
+   animation: fadeInDelayFast 0.8s ease-in-out forwards;
+}
+
+.animate-imageSlideIn {
+   animation: imageSlideIn 0.8s ease-out forwards;
+}
+
+.animate-textPop {
+   animation: textPop 0.6s ease-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInFast {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes slideInFast {
+   0% {
+      transform: translateY(30px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+@keyframes inputPop {
+   0% {
+      transform: scale(0.95);
+      opacity: 0;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+
+@keyframes textPop {
+   0% {
+      transform: scale(0.8);
+      opacity: 0;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+
+@keyframes buttonPop {
+   0% {
+      transform: scale(0.9);
+      opacity: 0;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+
+/* Applying the animations */
+.animate-fadeInFast {
+   animation: fadeInFast 0.6s ease-in-out forwards;
+}
+
+.animate-slideInFast {
+   animation: slideInFast 0.6s ease-out forwards;
+}
+
+.animate-inputPop {
+   animation: inputPop 0.6s ease-out forwards;
+}
+
+.animate-textPop {
+   animation: textPop 0.6s ease-out forwards;
+}
+
+.animate-buttonPop {
+   animation: buttonPop 0.6s ease-out forwards;
+}
+
+/* Adjusted animation durations for faster effects */
+
+@keyframes fadeInFast {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes fadeInDelayFast {
+   0% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 0.5;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes slideInLeft {
+   0% {
+      transform: translateX(-100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes slideInRight {
+   0% {
+      transform: translateX(100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes imageSlideIn {
+   0% {
+      transform: translateY(-30%); /* Reduced the distance */
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+@keyframes textPop {
+   0% {
+      transform: scale(0.9);
+      opacity: 0;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+
+/* Speeding up the animation durations */
+
+.animate-fadeInFast {
+   animation: fadeInFast 1s ease-out forwards; /* Speeded up */
+}
+
+.animate-fadeInDelayFast {
+   animation: fadeInDelayFast 1.5s ease-out forwards; /* Speeded up */
+}
+
+.animate-slideInLeft {
+   animation: slideInLeft 0.8s ease-out forwards; /* Speeded up */
+}
+
+.animate-slideInRight {
+   animation: slideInRight 0.8s ease-out forwards; /* Speeded up */
+}
+
+.animate-imageSlideIn {
+   animation: imageSlideIn 1s ease-out forwards; /* Speeded up */
+}
+
+.animate-textPop {
+   animation: textPop 0.8s ease-out forwards; /* Speeded up */
 }
